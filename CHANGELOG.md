@@ -5,7 +5,7 @@
 * **Added**
 * **Changed**
   * You can now build/install using a `make`/`make install`
-  * Reformatted the changelog
+  * Re-formatted the changelog
 
 ## v0.2.0 - Released 2020-07-30
 
