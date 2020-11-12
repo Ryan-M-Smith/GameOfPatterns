@@ -2,7 +2,7 @@
 
 ## How to Play
 
-Complete the numeric pattern you are randomly given. You are prompted 
+Complete the numeric pattern you are randomly given. You are prompted
 with 4 items, and then must complete the pattern up to 10.
 
 ---
