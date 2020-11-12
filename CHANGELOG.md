@@ -10,11 +10,11 @@
 ## v0.2.0 - Released 2020-07-30
 
 * **Added**
-  * An anti-repeat feature
-  * A full changelog
+  * Added an anti-repeat feature
+  * Added full changelog
 
 * **Changed**
-  * Re-formatted some of the game screens
+  * Re-formatted some of the in-game displays
   * Updated the README to make it more readable and user-friendly
 
 * **Fixed**
