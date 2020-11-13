@@ -4,7 +4,7 @@
 // CREATED: 2020-06-22 @ 3:27 AM
 // COPYRIGHT: Copyright (c) 2020 by Ryan Smith <rysmith2113@gmail.com>
 //
-a
+
 #include <iostream>
 #include <utility>
 #include <cstdlib>
@@ -54,7 +54,7 @@ int main() {
 		ushort patternID = patternData.second;
 
 		system("clear");
-		
+
 		while (!completed && !incorrect) {
 			cout << "\033[1;31m"
 				<< "Here is your pattern:"
@@ -69,7 +69,7 @@ int main() {
 			cout << "\033[;40m\033[7;37m"
 				<< "?"
 				<< "\033[0m\n";
-			
+
 			bool good = false;
 
 			while (!good) {
@@ -89,7 +89,7 @@ int main() {
 			cin.clear();
 
 			int next = solver->GenNext(pattern, patternID);
-			
+
 			system("clear"); // Clear for formatting
 
 			if (next == userNext) {
@@ -123,11 +123,11 @@ int main() {
 			cout << "\033[1;34m"
 				<< "You got " << itemsSolved << "/6 additional items in the pattern."
 				<< "\033[0m\n\n";
-			
+
 			cout << "\033[1;34m"
 			<< "Final pattern:"
 			<< "\033[0m\n\n";
-		
+
 			for (unsigned int i = 0; i < pattern.size(); i++) {
 				cout << pattern[i] << ", ";
 			}
@@ -136,7 +136,7 @@ int main() {
 			cout << "\033[;32m" << " (" << solver->GenNext(pattern, patternID) << ")" << endl;
 			cout << endl << endl;
 		}
-	
+
 	if ((rePrompt()) && (!pg->UsedAll())) {
 		goto game;
 	}
@@ -154,7 +154,7 @@ bool dispTitle() {
 	cout << "\033[4;31m\033[1;31m"
 		 << "Welcome to the Game of Patterns"
 		 << "\033[0m\n\n";
-	
+
 	// Prompt - Blue text with bold; "y/n" - green/red (respectively) with bold
 	cout << "\033[1;34m"
 		 << "Would you like to play ("
@@ -163,7 +163,7 @@ bool dispTitle() {
 		 << "\033[1;31m" << "n"
 		 << "\033[1;34m" << ")?"
 		 << "\033[0m\n\n";
-	
+
 	char answer = ' ';
 
 	do {
@@ -183,7 +183,7 @@ bool rePrompt() {
 		 << "\033[1;31m" << "n"
 		 << "\033[1;34m" << ")?"
 		 << "\033[0m\n\n";
-	
+
 	char answer = ' ';
 
 	do {
