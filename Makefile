@@ -1,7 +1,8 @@
 CC = g++
 CFLAGS = -Wall
 
-TARGET = main
+TARGET = gameofpatterns
+SOURCE = main
 INSTALL_LOC = /usr/bin
 
 USER := $(shell whoami)
@@ -12,8 +13,8 @@ all: $(TARGET)
 uninstall: clean
 
 # `make`
-$(TARGET): src/$(TARGET).cpp
-	$(CC) $(CFLAGS) -o $(TARGET) src/$(TARGET).cpp
+$(TARGET): src/$(SOURCE).cpp
+	$(CC) $(CFLAGS) -o $(TARGET) src/$(SOURCE).cpp
 
 # `make clean`
 clean:
