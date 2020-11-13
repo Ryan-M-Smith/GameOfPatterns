@@ -35,7 +35,9 @@ int Solver::GenNext(vector<int> pattern, ushort id) const {
 		},														// Subtract 3, add 1
 		{5, pattern.back() * 3},								// Multiply by 3
 		{6, pow(10, pattern.size() + 1)},						// Raise the next element's position to the 10th power
-		{7, pattern.back() * pattern.size()}					// Multiply the last element by the position
+		{7, pattern.back() * pattern.size()},					// Multiply the last element by the position
+		{8, pattern.back() + 17},								// Add 17
+		{9, pattern.back() * 8},								// Multiply by 8
 	};
 	
 	return solutions[id];
