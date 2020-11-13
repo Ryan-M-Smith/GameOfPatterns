@@ -10,7 +10,6 @@
 
 #include <cmath>
 #include <vector>
-#include <iostream>
 #include <map>
 
 using std::vector;
