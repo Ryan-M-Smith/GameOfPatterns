@@ -1,3 +1,5 @@
+# The Makefile for GameOfPatterns
+
 CC = g++
 CFLAGS = -Wall
 
