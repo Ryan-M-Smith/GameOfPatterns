@@ -2,9 +2,15 @@
 
 ## [Unreleased] v0.3.0 - Released [Unknown]
 
+* First release of the software on GitHub
+
 * **Added**
+  * Added an EditorConfig file
+  * Added 2 new patterns
+
 * **Changed**
-  * You can now build/install using a `make`/`make install`
+  * Refactored the pattern solving method
+  * You can now build/install using `make`/`make install`
   * Re-formatted the changelog
 
 ## v0.2.0 - Released 2020-07-30
@@ -18,7 +24,6 @@
   * Updated the README to make it more readable and user-friendly
 
 * **Fixed**
-
   * Fixed three broken patterns
   * You can now complete the game
 
