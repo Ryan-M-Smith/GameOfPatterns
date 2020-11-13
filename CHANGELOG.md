@@ -1,6 +1,6 @@
 # Game of Patterns - Changelog
 
-## [Unreleased] v0.3.0 - Released [Unknown]
+## v0.3.0 - Released 2020-11-13
 
 * First release of the software on GitHub
 
