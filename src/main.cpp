@@ -150,6 +150,8 @@ void sigHandler(int signo) {
 }
 
 bool dispTitle() {
+	cout << "This is GameOfPatterns v0.3.0.\tCopyright (c) 2020 by Ryan Smith.\n\n";
+
 	// Title - red with bold and underline
 	cout << "\033[4;31m\033[1;31m"
 		 << "Welcome to the Game of Patterns"
