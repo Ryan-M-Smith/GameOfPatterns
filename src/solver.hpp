@@ -11,55 +11,35 @@
 #include <cmath>
 #include <vector>
 #include <iostream>
+#include <map>
 
 using std::vector;
+using std::map;
 
 class Solver {
 public:
-	int GenNext(vector<int> pattern, ushort id);
+	int GenNext(vector<int> pattern, ushort id) const;
 	vector<int> Solve(vector<int> pattern, ushort id);
 };
 
-int Solver::GenNext(vector<int> pattern, ushort id) {
-	int next = 0;
+int Solver::GenNext(vector<int> pattern, ushort id) const {
+	// Generate the next element in a given pattern
+	map<int, int> solutions = {
+		{0, pow(pattern.size() + 1, 2)},						// Square the position of the next item in the sequence (5th element is 25)
+		{1, (pattern.back() + pattern.at(pattern.size() - 2))},	// Fibonacci Sequence
+		{2, pow(pattern.size() + 1, 3)},						// Cube the position of the next item in the sequence (5th element is 125)
+		{3, (pow(pattern.back(), 2) - 1)},						// Square the next element then subtract 1
+		{
+			4, ((pattern.at(pattern.size() - 2) - 3) == pattern.back())? \
+			(pattern.back() + 1) /* Add 1 if 3 was subtracted last */ : \
+			(pattern.back() - 3) /* Subtract 3 if 1 was added last */
+		},														// Subtract 3, add 1
+		{5, pattern.back() * 3},								// Multiply by 3
+		{6, pow(10, pattern.size() + 1)},						// Raise the next element's position to the 10th power
+		{7, pattern.back() * pattern.size()}					// Multiply the last element by the position
+	};
 	
-	switch (id) {
-		case 0: // Square the position of the next item in the sequence (5th element is 25)
-			next = pow(pattern.size() + 1, 2);
-			break;
-		case 1: // Fibonacci Sequence
-			next = (pattern.back() + pattern.at(pattern.size() - 2));
-			break;
-		case 2: // Cube the position of the next item in the sequence (5th element is 125)
-			next = pow(pattern.size() + 1, 3);
-			break;
-		case 3: // Square the next element then subtract 1
-			next = (pow(pattern.back(), 2) - 1);
-			break;
-		case 4: // Subtract 3, add 1
-			// Decide whether to subtract 3 or add 1
-			if ((pattern.at(pattern.size() - 2) - 3) == pattern.back()) { // Check for a subtraction of 3
-				next = pattern.back() + 1; // Add 1 because 3 was subtracted to get the last element 
-			}
-			else {
-				next = pattern.back() - 3; // Subtract 3
-			}
-
-			break;
-		case 5:
-			next = pattern.back() * 3; // Multiply by 3
-			break;
-		case 6:
-			next = pow(10, pattern.size() + 1); // A power of 10 with the next element in the sequence
-			break;
-		case 7:
-			next = pattern.back() * pattern.size(); // Multiply by an incremental value of 1 each time
-			break;
-		[[unlikely]] default:
-			break;	
-	}
-
-	return next;
+	return solutions[id];
 }
 
 vector<int> Solver::Solve(vector<int> pattern, ushort id) {
