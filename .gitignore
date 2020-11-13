@@ -1,1 +1,4 @@
 releases
+
+# Ignore potential leftover executables
+gameofpatterns
