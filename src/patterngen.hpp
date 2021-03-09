@@ -38,6 +38,7 @@ private:
 		{1, 2, 6, 24},        	// Multiply by an incremental value of one 
 		{17, 34, 51, 68},		// Count by 17s (next: 85, 102, 119...)
 		{5, 40, 320, 2560},		// Multiply by 8 (next: 20544, 164325...)
+		{1, 7, 21, 35},		    // The 7th row of Pascal's triangle (next: 35, 21, 7, 1)
 	};
 
 	vector<ushort> m_UsedIDs; // Used to prevent repeat patterns
